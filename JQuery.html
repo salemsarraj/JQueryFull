@@ -1,0 +1,195 @@
+<!DOCTYPE>
+<head>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<script>
+$(document).ready(function(){
+$('#sh').hide();
+$('#sh-mouse').hide();
+$('#sh-toggle').hide();
+$('#sh-textBox').hide();
+$('#sh-dbClick').hide();
+$('#sh-on').hide();
+$('#sh-0').hide();
+
+$('#show').click(function(){
+$('#sh').show(500);
+});
+
+$('#hide').click(function(){
+$('#sh').hide(500);
+});
+
+
+$('#sh-hi-mouse').mouseenter(function(){
+$('#sh-mouse').show(500);
+});
+
+$('#sh-hi-mouse').mouseleave(function(){
+$('#sh-mouse').hide(500);
+});
+
+$('#sh-hi-toggle').click(function(){
+$('#sh-toggle').toggle(500);
+});
+
+
+$('#txtBox').focus(function(){
+$('#sh-textBox').show(500);
+});
+
+$('#txtBox').blur(function(){
+$('#sh-textBox').hide(500);
+});
+
+
+$('#sh-hi-dbClick').dblclick(function(){
+$('#sh-dbClick').toggle(500);
+});
+
+$('#sh-hi-on').on("click",function(){
+$('#sh-on').toggle(500);
+});
+
+
+$('#sh-hi-blue').click(function(){
+$('#sh-css').css("background-color","blue");
+});
+
+$('#sh-hi-red').click(function(){
+$('#sh-css').css("background-color","red");
+});
+
+
+$('#sh-hi-animate').click(function(){
+$('#sh-animate').animate({left: '250px'});
+$('#sh-animate').animate({left: '0px'});
+});
+
+
+$('#sh-hi-0').click(function(){
+$('#sh-0').toggle();
+});
+
+$('#sh-hi-1000').click(function(){
+$('#sh-0').toggle(1000);
+});
+
+
+})
+</script>
+
+<style>
+
+	.container{
+	width: 28%;
+	display: inline-block;
+	border: solid 2px gray;
+	margin: 10px;
+	padding: 20px;
+	vertical-align: top;
+	position: relative;
+	top: 0px
+	}
+	
+	.btn{
+	background:blue;
+	color:white;
+	padding-left:4px;
+	padding-right:4px;
+	cursor:pointer;
+	font-size:25px;
+	border:none;
+	border-radius:6px;
+	
+	}
+
+</style>
+
+</head>
+
+<body style="font-size:18px">
+
+<div class="container">
+<button id="show" class="btn">Show</button>
+<button id="hide" class="btn">Hide</button>
+<label> by .click() </label>
+<br/>
+<br/>
+<label id="sh"> Show / Hide this text !!! </label>
+</div>
+
+<div class="container">
+<button id="sh-hi-mouse" class="btn">Hover Me</button>
+<label> by .mouseenter().mouseleave() </label>
+<br/>
+<br/>
+<label id="sh-mouse"> Show / Hide this text !!! </label>
+</div>
+
+<div class="container">
+<button id="sh-hi-toggle" class="btn">Click Me Again</button>
+<label> by .click() => .toggle() </label>
+<br/>
+<br/>
+<label id="sh-toggle"> Show / Hide this text !!! </label>
+</div>
+
+<br/>
+
+
+<div class="container">
+<input type="text" id="txtBox" placeholder="show/hide by click here !!!">
+<label> by .focus() .blur() </label>
+<br/>
+<br/>
+<label id="sh-textBox"> Show / Hide this text !!! </label>
+</div>
+
+<div class="container">
+<button id="sh-hi-dbClick" class="btn">Double Click</button>
+<label> by .dblclick() => .toggle() </label>
+<br/>
+<br/>
+<label id="sh-dbClick"> Show / Hide this text !!! </label>
+</div>
+
+<div class="container">
+<button id="sh-hi-on" class="btn">Click More</button>
+<label> by .on("click") => .toggle() </label>
+<br/>
+<br/>
+<label id="sh-on"> Show / Hide this text !!! </label>
+</div>
+
+<br/><hr/><br/>
+
+<div class="container">
+<button id="sh-hi-blue" class="btn">Blue</button>
+<button id="sh-hi-red" class="btn" style="background:red">Red</button>
+<label> by .click() => .css() </label>
+<br/>
+<br/>
+<label id="sh-css" style="background:black;color:white"> change BG color for this text !!! </label>
+</div>
+
+<div class="container">
+<button id="sh-hi-animate" class="btn">Move</button>
+<label> by .click() => .animate() </label>
+<br/>
+<br/>
+<label id="sh-animate" style="background:black;color:white;position:relative"> animate this text !!! </label>
+</div>
+
+<div class="container">
+<button id="sh-hi-0" class="btn" style="font-size:20px">toggle()</button>
+<button id="sh-hi-1000" class="btn" style="font-size:20px">toggle(1000)</button>
+
+<label> by .click => .toggle() </label>
+<br/>
+<br/>
+<label id="sh-0"> Show / Hide this text !!! </label>
+</div>
+
+</body>
